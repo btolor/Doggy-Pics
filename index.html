@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- FontAwesome Icons -->
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800|Roboto:100,300,400,500,700,900|Shrikhand&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/app.css">
+    <link rel="stylesheet" href="assets/css/minif_main.css">
+</head>
+
+<body>
+    <!-- start of header -->
+    <header class="header">
+        <!-- start of container -->
+        <div class="grid-container">
+            <!-- start of grid -->
+            <div class="grid-x grid-margin-x grid">
+
+                <!-- start of logo-img -->
+                <div class="cell small-12 medium-8 large-6 logo-img" cell>
+                    <img src="https://i.postimg.cc/SjbbLZ9q/logo-pic.png" alt="Doggy Pics Logo"><h1 class="logo">Doggy Pics</h1>
+                </div>
+                <!-- end of logo-img -->
+                <!-- start of logo-title -->
+                <!-- <div class="cell small-6 large-6 logo-title" cell>
+                    
+                </div> -->
+                <!-- end of logo-title -->
+                <!-- start of menu-sec -->
+                <div class="cell small-12 medium-4 large-6 menu" cell>
+                    <a href="https://dog.ceo/dog-api/" target="_blank" aria-label="https://dog.ceo/dog-api/"
+                        rel="noopener">Powered by dog.ceo api</a>
+                </div>
+                <!-- end of menu-sec -->
+            </div>
+            <!-- end of grid -->
+        </div>
+        <!-- end of container -->
+    </header>
+    <!-- end of header -->
+
+    <!-- start of main -->
+    <main>
+
+        <!-- start of search-section -->
+        <section class="search">
+            <!-- start of container -->
+            <div class="grid-container">
+                <h2 class="search-title">Search For Your Favorite Doggy</h2>
+                <!-- start of input-grid -->
+                <div class="grid-x grid-padding-x input-grid">
+                    <label for="user-input">input</label>
+                    <input type="text" name="user-input" id="user-input" class="cell small-12 medium-8 large-8" cell>
+                    <button type="submit" id="btn" class="cell small-12 medium-4 large-3" cell>submit</button>
+                </div>
+                <!-- end of input-grid -->
+            </div>
+            <!-- end of container -->
+        </section>
+        <!-- end of search-section -->
+
+        <!-- start pictures-sec -->
+        <section class="random-pics pictures">
+            <!-- start of container -->
+            <div class="grid-container">
+
+                <h3 id='error'>Sorry! Breed not found.</h3>
+
+                <h2 class="breed" id="breed-title">#Random_Doggies</h2>
+
+                <!-- start of pics-grid -->
+                <div class="grid-x grid-margin-x grid-margin-y pics-grid">
+
+                </div>
+                <!-- end of pics-grid -->
+            </div>
+            <!-- end of container -->
+        </section>
+        <!-- start pictures-sec -->
+
+        
+
+    </main>
+    <!-- end of main -->
+
+    <!-- start of footer -->
+    <footer>
+
+        <!-- start of container -->
+        <div class="grid-container">
+            <!-- start of grid -->
+            <div class="grid-x grid-margin-x grid align-middle">
+
+                <!-- start of copyrights -->
+                <div class="cell small-12 medium-12 large-4 copyrights">
+                    <h6>
+                        © 2019 All Rights Reserved Brandon Tolor
+                    </h6>
+                </div>
+                <!-- end of copyrights -->
+
+                <!-- start of credits -->
+                <div class="cell small-12 medium-12 large-4 credits">
+                    <a href="https://dog.ceo/" target="_blank" aria-label="https://dog.ceo/" rel="noopener">DOG.CEO</a>
+                </div>
+                <!-- end of credits -->
+
+                <!-- start of social-media -->
+                <div class="cell small-12 medium-12 large-4 social-media">
+                    <a href="https://github.com/btolor" target="_blank" id="github-link"
+                        aria-label="https://github.com/btolor" rel="noopener"><i class="fa fa-github-square"
+                            aria-hidden="true"></i></a>
+                    <a href="https://twitter.com/Tolor_Boy" target="_blank" id="twitter-link"
+                        aria-label="https://twitter.com/Tolor_Boy" rel="noopener"><i class="fa fa-twitter-square"
+                            aria-hidden="true"></i></a>
+                    <a href="https://www.linkedin.com/in/brandon-tolor-343098106/" target="_blank" id="linkedin-link"
+                        aria-label="https://www.linkedin.com/in/brandon-tolor-343098106/" rel="noopener"><i
+                            class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+                </div>
+                <!-- end of social-media -->
+
+            </div>
+            <!-- end of grid -->
+
+        </div>
+        <!-- end of container -->
+
+    </footer>
+    <!-- end of footer -->
+
+
+    <!-- start of javascript tags -->
+    <script src="assets/js/app.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous">
+        </script>
+    <script src="assets/js/minif_script.js"></script>
+    <!-- end of javascript tags -->
+</body>
+
+</html>

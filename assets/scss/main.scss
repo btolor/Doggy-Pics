@@ -1,0 +1,271 @@
+// Imports...
+@import 'mixins';
+/** Variables... */
+// Font Variables...
+$title-font: 'Shrikhand', cursive;
+$text-font: 'Roboto', 'Open Sans', sans-serif;
+// Color Variables...
+$gold: #ffa41b;
+$navy-blue: #000839;
+$true-blue: #005082;
+$light-blue: #00a8cc;
+$love: #ff6666;
+
+/** Application Styles... */
+
+// Header Styles...
+header{
+    background: $true-blue;
+    padding: 16px 0 8px;
+    border-bottom: 1px solid $navy-blue;
+    .grid{
+        .logo-img{
+            display: flex; 
+            align-content: flex-end;
+            img{
+                width:80px;
+                height: 60px;
+            }
+            h1{
+                font-family: $title-font;
+                color: $gold;
+                -webkit-text-stroke: 2px $navy-blue;
+                margin-bottom: 0;
+                margin-left: 10px;
+            }
+        }
+        .menu{
+            @include flex(flex,row);
+            align-content: center;
+            justify-content: flex-end;
+            a{
+                text-transform: uppercase;
+                padding: 0;
+                font-family: $text-font;
+                color: white;
+                font-weight: 700;
+                transition: .3s;
+                font-style: italic;
+                font-size: 14px;
+                &:hover{
+                    color: $gold;
+                }
+            }
+        }
+    }
+    @include media-max (1024px){
+        .grid{
+            padding: 0 20px;
+        }
+    }
+    @include media-max (640px){
+        .grid{
+            padding-left: 8px;
+            padding-top: 8px;
+            padding-bottom: 8px;
+            .logo-img{
+                img{
+                    width:70px;
+                    height: 50px;
+                }
+                h1{
+                    font-size: 36px;
+                }
+            }
+            .menu{
+                padding-top: 10px;
+                justify-content: flex-start;
+                align-content: flex-end;
+                a{
+                    font-size: 12px;
+                    color: $light-blue;
+                }
+                
+            }
+        }
+    }
+}
+
+/**Main Styles... */
+main{
+
+    // Search Section...
+    .search{
+        .grid-container{
+            @include center(60%, 0 auto);
+            text-align: center;
+            padding: 40px 0 20px;
+            h2{
+                color: $navy-blue;
+            }
+            .input-grid{
+                @include center(50%, 0 auto);
+                @include fullFlex(flex,row,space-around);
+                padding: 32px 0 30px;
+                label{
+                    color: transparent;
+                    position: absolute;
+                }
+                input[type=text]{
+                    color:$navy-blue;
+                    border: 1px solid $light-blue;
+                    border-radius: 8px;
+                    font-family: $text-font;
+                    font-size: 22px;
+                    margin-bottom: 0;
+                    &:focus{
+                        outline: none;
+                    }
+                }
+                button{
+                    color: white;
+                    background: $true-blue;
+                    width: fit-content;
+                    text-transform: uppercase;
+                    font-weight: 700;
+                    padding: 8px 12px;
+                    border-radius: 8px;
+                    transition: .3s;
+                    &:hover{
+                        background: $navy-blue;
+                        color: $gold;
+                        border: 1px solid $gold;
+                    }
+                }
+            }
+            @include media-max(1024px){
+                .input-grid{
+                    @include center(75%, 0 auto);
+                }
+            }
+            @include media-max(640px){
+                .input-grid{
+                    input[type=text]{
+                        margin-bottom: 16px;
+                    }
+                    button{
+                        width: 90%;
+                        padding-top: 12px;
+                        padding-bottom: 12px;
+                    }
+                }
+            }
+        }
+        
+        // @include media-max(640px){}
+    }
+
+    // Random/Search-Pics Styles...
+    .pictures{
+        #error{
+            text-align: center;
+            font-family: $text-font;
+            color: $navy-blue;
+            font-size: 18px;
+            font-weight: 600;
+            padding-bottom: 8px;
+            display: none;
+        }
+        .breed{
+            text-align: center;
+            font-family: $text-font;
+            color: $navy-blue;
+            font-size: 28px;
+            font-weight: 800;
+            text-transform: capitalize;
+        }
+        .pics-grid{
+            padding-top: 20px;
+            padding-bottom: 80px;
+            @include center(100%,0 auto);
+            .pic-card{
+                .card{
+                    @include flex(flex,column);
+                    border-radius: 9px;
+                    border: 1px solid $navy-blue;
+                    -webkit-box-shadow: 0px 4px 10px 0px rgba(0,8,57,1);
+                    -moz-box-shadow: 0px 4px 10px 0px rgba(0,8,57,1);
+                    box-shadow: 0px 4px 10px 0px rgba(0,8,57,1);
+                    .img-placeholder{
+                        text-align: center;
+                        img{
+                           width: 100%;
+                            height: 200px;
+                            max-height: 200px; 
+                        }
+                    }
+                    .rating{
+                        padding: 20px 20%;
+                        text-align: center;
+                        a{
+                            font-family: $text-font;
+                            color: $navy-blue;
+                            font-weight: 800;
+                            transition: .3s;
+                            text-transform: uppercase;
+                            font-style: italic;
+                            text-decoration: underline;
+                            .fa{
+                                margin-left: 3px;
+                            }
+                            &:hover{
+                                color: $gold;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        @include media-max(640px){
+            padding: 0 10%;
+        }
+    } 
+
+}
+
+// Footer Styles...
+footer{
+    background: $true-blue;
+    border-top: 1px solid $navy-blue;
+    padding: 40px 0 20px;
+    .copyrights{
+        text-align: center;
+        h6{
+            font-family: $text-font;
+            color: $light-blue;
+            font-size: 14px;
+            margin-bottom: 0;
+        }
+    }
+    .social-media{
+        text-align: center;
+        a{
+            margin: 0 16px;
+            font-size: 32px;
+            transition: .3s;
+            &:hover{
+                color: $gold;
+            }
+        }
+    }
+    .credits{
+        text-align: center;
+        a{
+            font-family: $title-font;
+            color: $light-blue;
+            font-size: 18px;
+            font-style: italic;
+            transition: .3s;
+            &:hover{
+                color: $gold;
+            }
+        }
+    }
+    @include media-max(1024px){
+        .grid{
+            .copyrights{
+                padding-bottom: 10px;
+            }
+        }
+    }
+}
